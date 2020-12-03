@@ -5,7 +5,7 @@
 #if canImport(UIKit)
 import UIKit
 
-open class View: UIView {
+open class CompositeView: UIView {
 
     open var viewComposition: ViewBlock { EmptyBlock() }
 
