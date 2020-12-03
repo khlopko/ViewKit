@@ -16,3 +16,11 @@ public struct EmptyBlock: ViewBlock {
     }
 
 }
+
+extension Array: ViewBlock where Element: ViewBlock {
+
+    public func add(to superblock: ViewBlock) {
+        forEach { $0.add(to: superblock) }
+    }
+
+}
