@@ -7,6 +7,9 @@ public protocol ViewBlock {
 }
 
 public struct EmptyBlock: ViewBlock {
+    
+    public init() {
+    }
 
     public func add(to superblock: ViewBlock) {
         // Do nothing.
