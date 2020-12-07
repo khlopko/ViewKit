@@ -68,6 +68,7 @@ open class CollectionReusableView: UICollectionReusableView, CompositeView, Comb
 open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBinding {
 
     open var viewComposition: ViewBlock { EmptyBlock() }
+    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(frame: CGRect) {
@@ -108,6 +109,7 @@ open class TableView: UITableView, CompositeView, CombineBinding {
 open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView, CombineBinding {
 
     open var viewComposition: ViewBlock { EmptyBlock() }
+    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(reuseIdentifier: String?) {
@@ -128,6 +130,7 @@ open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView
 open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
 
     open var viewComposition: ViewBlock { EmptyBlock() }
+    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
