@@ -7,6 +7,7 @@ import Combine
 
 open class CoreView: UIView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self } 
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
