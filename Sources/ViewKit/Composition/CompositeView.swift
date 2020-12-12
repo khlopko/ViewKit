@@ -13,7 +13,7 @@ extension CompositeView {
 
     public var targetView: UIView { self }
 
-    internal func composite() {
+    public func composite() {
         viewComposition.add(to: targetView)
     }
 
