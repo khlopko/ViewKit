@@ -7,6 +7,7 @@ import Combine
 
 open class ScrollView: UIScrollView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -27,6 +28,7 @@ open class ScrollView: UIScrollView, CompositeView, CombineBinding {
 
 open class CollectionView: UICollectionView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -47,6 +49,7 @@ open class CollectionView: UICollectionView, CompositeView, CombineBinding {
 
 open class CollectionReusableView: UICollectionReusableView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -67,8 +70,8 @@ open class CollectionReusableView: UICollectionReusableView, CompositeView, Comb
 
 open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBinding {
 
+    open var targetView: UIView { contentView }
     open var viewComposition: ViewBlock { EmptyBlock() }
-    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(frame: CGRect) {
@@ -88,6 +91,7 @@ open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBindi
 
 open class TableView: UITableView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -108,8 +112,8 @@ open class TableView: UITableView, CompositeView, CombineBinding {
 
 open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { contentView }
     open var viewComposition: ViewBlock { EmptyBlock() }
-    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(reuseIdentifier: String?) {
@@ -129,8 +133,8 @@ open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView
 
 open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
 
+    open var targetView: UIView { contentView }
     open var viewComposition: ViewBlock { EmptyBlock() }
-    public final var targetView: UIView { contentView }
     public final var bag = Set<AnyCancellable>()
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -150,6 +154,7 @@ open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
 
 open class Control: UIControl, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -170,6 +175,7 @@ open class Control: UIControl, CompositeView, CombineBinding {
 
 open class Button: UIButton, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -190,6 +196,7 @@ open class Button: UIButton, CompositeView, CombineBinding {
 
 open class ImageView: UIImageView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -222,6 +229,7 @@ open class ImageView: UIImageView, CompositeView, CombineBinding {
 
 open class Label: UILabel, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -242,6 +250,7 @@ open class Label: UILabel, CompositeView, CombineBinding {
 
 open class TextView: UITextView, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 
@@ -262,6 +271,7 @@ open class TextView: UITextView, CompositeView, CombineBinding {
 
 open class TextField: UITextField, CompositeView, CombineBinding {
 
+    open var targetView: UIView { self }
     open var viewComposition: ViewBlock { EmptyBlock() }
     public final var bag = Set<AnyCancellable>()
 

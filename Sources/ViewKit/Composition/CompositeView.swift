@@ -11,8 +11,6 @@ public protocol CompositeView: UIView {
 
 extension CompositeView {
 
-    public var targetView: UIView { self }
-
     public func composite() {
         viewComposition.add(to: targetView)
     }
