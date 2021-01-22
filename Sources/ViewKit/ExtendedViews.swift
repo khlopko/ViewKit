@@ -63,6 +63,11 @@ open class CollectionReusableView: UICollectionReusableView, CompositeView, Comb
         fatalError("init(coder:) has not been implemented")
     }
 
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        bag.removeAll()
+    }
+    
     open func bindPublishers() {
     }
 
@@ -82,6 +87,11 @@ open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBindi
 
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        bag.removeAll()
     }
 
     open func bindPublishers() {
@@ -125,6 +135,11 @@ open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        bag.removeAll()
+    }
 
     open func bindPublishers() {
     }
@@ -145,6 +160,11 @@ open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
 
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        bag.removeAll()
     }
 
     open func bindPublishers() {
