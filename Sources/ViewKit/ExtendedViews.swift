@@ -66,6 +66,7 @@ open class CollectionReusableView: UICollectionReusableView, CompositeView, Comb
     open override func prepareForReuse() {
         super.prepareForReuse()
         bag.removeAll()
+        bindPublishers()
     }
     
     open func bindPublishers() {
@@ -92,6 +93,7 @@ open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBindi
     open override func prepareForReuse() {
         super.prepareForReuse()
         bag.removeAll()
+        bindPublishers()
     }
 
     open func bindPublishers() {
@@ -139,6 +141,7 @@ open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView
     open override func prepareForReuse() {
         super.prepareForReuse()
         bag.removeAll()
+        bindPublishers()
     }
 
     open func bindPublishers() {
@@ -165,6 +168,7 @@ open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
     open override func prepareForReuse() {
         super.prepareForReuse()
         bag.removeAll()
+        bindPublishers()
     }
 
     open func bindPublishers() {
