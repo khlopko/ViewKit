@@ -1,3 +1,3 @@
 # ViewKit
 
-A description of this package.
+An extended set of interfaces to build apps with UIKit.
