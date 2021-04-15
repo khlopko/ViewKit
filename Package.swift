@@ -17,5 +17,10 @@ let package = Package(
     targets: [
         .target(
             name: "ViewKit",
-            dependencies: [])
+            dependencies: []),
+        .testTarget(
+            name: "ViewKitTests",
+            dependencies: [
+                .target(name: "ViewKit")
+            ])
     ])

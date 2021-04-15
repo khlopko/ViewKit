@@ -313,3 +313,25 @@ open class TextField: UITextField, CompositeView, CombineBinding {
     }
 
 }
+
+open class VisualEffectView: UIVisualEffectView, CompositeView, CombineBinding {
+
+    open var targetView: UIView { contentView }
+    open var viewComposition: ViewBlock { EmptyBlock() }
+
+    public final var bag = Set<AnyCancellable>()
+
+    public override init(effect: UIVisualEffect?) {
+        super.init(effect: effect)
+        composite()
+        bindPublishers()
+    }
+
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    open func bindPublishers() {
+    }
+
+}
