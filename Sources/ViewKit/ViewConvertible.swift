@@ -4,6 +4,22 @@
 
 import UIKit
 
+public typealias LabelBuilder = ViewConvertible<UILabel>
+public typealias TextFieldBuilder = ViewConvertible<UITextField>
+public typealias TextViewBuilder = ViewConvertible<UITextView>
+public typealias ScrollViewBuilder = ViewConvertible<UIScrollView>
+public typealias TableViewBuilder = ViewConvertible<UITableView>
+public typealias CollectionViewBuilder = ViewConvertible<UITableView>
+public typealias UIVisualEffectViewBuilder = ViewConvertible<UIVisualEffectView>
+public typealias ActivityIndicatorViewBuilder = ViewConvertible<UIActivityIndicatorView>
+public typealias ImageViewBuilder = ViewConvertible<UIImageView>
+public typealias ButtonBuilder = ViewConvertible<UIButton>
+public typealias SwitchBuilder = ViewConvertible<UISwitch>
+public typealias SliderBuilder = ViewConvertible<UISlider>
+public typealias ToolbarBuilder = ViewConvertible<UIToolbar>
+public typealias DatePickerBuilder = ViewConvertible<UIDatePicker>
+public typealias PageControlBuilder = ViewConvertible<UIPageControl>
+
 /// Builder for the UIKit views.
 ///
 /// Usage example:
@@ -14,7 +30,7 @@ import UIKit
 @dynamicMemberLookup
 public struct ViewConvertible<View> where View : UIView {
 
-    private let view: View
+    public let view: View
 
     public init(_ make: @autoclosure () -> View) {
         view = make()
@@ -28,7 +44,9 @@ public struct ViewConvertible<View> where View : UIView {
         self.view = view
     }
 
-    public subscript <T>(dynamicMember member: ReferenceWritableKeyPath<View, T>) -> ViewProperty<View, T> {
+    public subscript <T>(
+        dynamicMember member: ReferenceWritableKeyPath<View, T>
+    ) -> ViewProperty<View, T> {
         ViewProperty(view: view, keyPath: member)
     }
 
