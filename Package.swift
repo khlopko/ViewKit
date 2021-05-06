@@ -13,11 +13,14 @@ let package = Package(
             targets: ["ViewKit"])
     ],
     dependencies: [
+        .package(url: "https://github.com/khlopko/Outline.git", .exact("1.3.3"))
     ],
     targets: [
         .target(
             name: "ViewKit",
-            dependencies: []),
+            dependencies: [
+                .product(name: "Outline", package: "Outline")
+            ]),
         .testTarget(
             name: "ViewKitTests",
             dependencies: [

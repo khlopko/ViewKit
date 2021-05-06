@@ -24,6 +24,14 @@ open class ScrollView: UIScrollView, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class CollectionView: UICollectionView, CompositeView, CombineBinding {
@@ -43,6 +51,14 @@ open class CollectionView: UICollectionView, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }
@@ -72,6 +88,14 @@ open class CollectionReusableView: UICollectionReusableView, CompositeView, Comb
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBinding {
@@ -99,6 +123,14 @@ open class CollectionViewCell: UICollectionViewCell, CompositeView, CombineBindi
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class TableView: UITableView, CompositeView, CombineBinding {
@@ -118,6 +150,14 @@ open class TableView: UITableView, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }
@@ -147,6 +187,14 @@ open class TableViewHeaderFooterView: UITableViewHeaderFooterView, CompositeView
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
@@ -174,6 +222,14 @@ open class TableViewCell: UITableViewCell, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class Control: UIControl, CompositeView, CombineBinding {
@@ -195,6 +251,14 @@ open class Control: UIControl, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class Button: UIButton, CompositeView, CombineBinding {
@@ -214,6 +278,14 @@ open class Button: UIButton, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }
@@ -249,6 +321,14 @@ open class ImageView: UIImageView, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class Label: UILabel, CompositeView, CombineBinding {
@@ -268,6 +348,14 @@ open class Label: UILabel, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }
@@ -291,6 +379,14 @@ open class TextView: UITextView, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }
 
 open class TextField: UITextField, CompositeView, CombineBinding {
@@ -310,6 +406,14 @@ open class TextField: UITextField, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }
@@ -332,6 +436,14 @@ open class VisualEffectView: UIVisualEffectView, CompositeView, CombineBinding {
     }
 
     open func bindPublishers() {
+    }
+
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
     }
 
 }

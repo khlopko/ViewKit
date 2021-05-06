@@ -24,4 +24,12 @@ open class CoreView: UIView, CompositeView, CombineBinding {
     open func bindPublishers() {
     }
 
+    open var layout: Layout { NoneLayout() }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        var layout = self.layout
+        layout.layout(in: targetView.bounds)
+    }
+
 }

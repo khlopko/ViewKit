@@ -30,7 +30,7 @@ public typealias PageControlBuilder = ViewConvertible<UIPageControl>
 @dynamicMemberLookup
 public struct ViewConvertible<View> where View : UIView {
 
-    public let view: View
+    private let view: View
 
     public init(_ make: @autoclosure () -> View) {
         view = make()
