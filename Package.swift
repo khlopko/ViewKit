@@ -5,22 +5,18 @@ import PackageDescription
 let package = Package(
     name: "ViewKit",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v12)
     ],
     products: [
         .library(
             name: "ViewKit",
             targets: ["ViewKit"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/khlopko/Outline.git", .exact("1.3.3"))
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "ViewKit",
-            dependencies: [
-                .product(name: "Outline", package: "Outline")
-            ]),
+            dependencies: []),
         .testTarget(
             name: "ViewKitTests",
             dependencies: [
